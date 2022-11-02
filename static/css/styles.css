@@ -1,0 +1,108 @@
+
+.colored-section{
+background-color: #054B5D;
+padding: 70px;
+color: white;
+text-align: center;
+}
+
+.light-section{
+padding-top: 70px;
+padding-left: 30px;
+padding-bottom: 50px;
+text-align: center;
+}
+
+.container{
+text-align: center;
+padding-top: 20px;
+padding-bottom: 40px;
+}
+
+.text{
+margin: auto;
+line-height: 2;
+font-size: 1.2em;
+}
+.card{
+margin-top: 20px;
+margin-left: 10px;
+
+}
+
+
+.stock {
+    max-width:30%;
+    height:auto;
+    padding-bottom: 5px;
+}
+.page-title{
+font-size: 5em;
+padding-bottom: 5px;
+}
+h2{
+padding-top: 10px;
+}
+.courses{
+margin-left: 10px;
+margin-right: 22px;
+padding-bottom: 20px;
+}
+
+
+.offers{
+text-align: center;
+background-color: #EAECEE;
+padding-top: 20px;
+padding-bottom: 40px;
+}
+.icon{
+max-width: 7%;
+height: auto;
+padding-bottom: 5px;
+padding-left: 15px;
+}
+
+.product-container{
+font-family: 'Montserrat', sans-serif;
+background-color: #EAECEE;
+}
+
+.choice{
+background-color: #2C717F;
+
+}
+
+
+.description{
+width: 50%;
+line-height: 1.2;
+font-size: 1em;
+}
+
+.form-class{
+text-align: left;
+padding-top: 10px;
+
+}
+
+.btn{
+margin-top: 5px;
+
+}
+
+.shopping-cart{
+margin-left: 20px;
+}
+
+footer{
+position: fixed;
+margin-top: 10px;
+left: 0;
+bottom: 0;
+width: 100%;
+background-color: #EAECEE;
+text-align: center;
+padding-top: 5px;
+}
+

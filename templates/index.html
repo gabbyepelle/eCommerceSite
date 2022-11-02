@@ -1,0 +1,102 @@
+{% block content %}
+{% include "header.html" %}
+<div class="product-container">
+<div class="colored-section">
+
+  <h1 class="page-title">Break Into Tech</h1>
+    <h4> Launch your tech career with our online bootcamp. </h4>
+        <a class="btn btn-warning btn-lg" href="{{url_for('register')}}">Sign Up</a>
+
+</div>
+
+    <div class="light-section">
+        <h1>No Degree? No problem!</h1>
+                <h3>Our curriculum has enabled students from a variety of backgrounds to have successful careers in the tech industry. </h3>
+    </div>
+
+
+    <div class="container">
+
+            <h1>Follow our easy 3-step process. </h1>
+                  <div class="row">
+            <div class="col col-sm-12 col-md-12 col-lg-4">
+          <div class="card shadow-sm">
+  <img src="{{url_for('static', filename='images/code.jpg')}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">1. Learn the Skills</h5>
+    <p class="card-text"><p class="text">Learn to code with a mixture of video tutorials, practice exercises, quizzes and projects, taught by industry professionals. All of our courses are online and self-paced, enabling you to learn at your convenience. </p>
+  </div>
+</div>
+</div>
+                <div class="col col-sm-12 col-md-12 col-lg-4">
+          <div class="card shadow-sm">
+  <img src="{{url_for('static', filename='images/resume.jpg')}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">2. Build a killer resume</h5>
+    <p class="card-text"><p class="text"> Each of our courses gives students an opportunity to build real world projects that will make their portfolios stand out to potential employers. Students also have access to resume building workshops. </p>
+  </div>
+</div>
+</div>
+<div class="col col-sm-12 col-md-12 col-lg-4">
+          <div class="card shadow-sm">
+  <img src="{{url_for('static', filename='images/interview.jpg')}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">3. Ace the Technical Interview<</h5>
+    <p class="card-text"><p class="text">Through a mixture of videos and quizzes, our Data Structures and Algorithms and Python for Data Science courses are designed to give our students the skills and confidence to ace their technical interviews. </p>
+  </div>
+</div>
+</div>
+</div>
+        </div>
+
+    <div class="offers">
+    <h3>Our graduates have received offers from: </h3>
+    <img class="icon" src="{{url_for('static', filename='images/apple.png')}}"/>
+    <img class="icon" src="{{url_for('static', filename='images/google.png')}}"/>
+    <img class="icon" src="{{url_for('static', filename='images/meta.png')}}"/>
+    <img class="icon" src="{{url_for('static', filename='images/netflix.png')}}"/>
+</div>
+
+
+    <div class="colored-section choice">
+        <h1>Choose Your Specialization</h1>
+        <h4>Know the job you want and the skills you need? Great! Choose from our specialization courses below. If you're not sure our Intro to Programming Course is a great place to start. </h4>
+    </div>
+<div class="courses">
+    {% for product in products %}
+     <div class="card">
+                <div class="card-header">
+        <h2>{{product.name}}</h2>
+                    </div>
+                <div class="card-body">
+        <h6>3-4 months to complete</h6>
+        <h6>60+ hours of videos</h6>
+        <p class="description">{{product.description}}
+            <br>
+            What you'll learn: </p>
+            <ul>
+                {% for item in product.features %}
+            <li>{{item}}</li>
+            {% endfor %}
+        </ul>
+
+        <p>$99.99</p>
+   <a class="btn btn-primary" href="{{url_for('add_to_cart', item_id = product.id)}}">Add to Cart</a>
+                    </div>
+                </div>
+{% endfor %}
+
+        </div>
+</div>
+
+{% endblock %}
+
+{% include "footer.html" %}
+
+
+
+
+
+
+
+

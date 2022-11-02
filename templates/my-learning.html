@@ -1,0 +1,20 @@
+{% block content %}
+{% include "header.html" %}
+
+<div class="container">
+<h1>Hi {{current_user.name}}! </h1>
+    <h2>Courses</h2>
+    {% for purchase in current_user.purchases %}
+    <div class="card text-bg-light mb-3">
+  <div class="card-body">
+    <h5 class="card-title">{{purchase}}</h5>
+ <a href="#" class="btn btn-dark">Start</a>
+</div>
+        </div>
+{% endfor %}
+</div>
+
+
+
+{% endblock %}
+{% include "footer.html" %}

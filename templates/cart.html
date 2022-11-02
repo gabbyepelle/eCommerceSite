@@ -1,0 +1,35 @@
+{% block content %}
+{% include "header.html" %}
+<div class="shopping-cart">
+<h2>Shopping Cart</h2>
+<ol>
+{% for item in current_user.items %}
+<li>{{item.name}}
+    <br>
+    ${{item.price}}
+    <br>
+<a class="btn btn-danger btn-sm" href="{{url_for('delete_cart_item', item_id = item.id)}}">Remove from Cart</a>
+    </li>
+{% endfor %}
+</ol>
+    <h3>Subtotal: ${{total}}</h3>
+    <a href="{{url_for('home')}}"> Keep Shopping</a>
+<form action="/create-checkout-session" method="POST">
+        <button class="btn btn-primary" type="submit" id="checkout-button">Checkout</button>
+      </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
+
+{% include "footer.html" %}
